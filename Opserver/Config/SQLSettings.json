@@ -1,0 +1,12 @@
+﻿{
+    "defaultConnectionString": "Data Source=$ServerName$,1433;Network Library=DBMSSOCN;Initial Catalog=careerdb;User ID=ccwebadmin;Password=crm5au1g;",
+    "clusters": [
+    ],
+    "instances": [
+        {
+            "name": "careerdb",
+            "connectionString": "Data Source=192.168.11.5,1433;Network Library=DBMSSOCN;Initial Catalog=careerdb;User ID=ccwebadmin;Password=crm5au1g;"
+
+        }
+    ]
+}

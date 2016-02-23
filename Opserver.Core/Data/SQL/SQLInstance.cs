@@ -43,7 +43,14 @@ namespace StackExchange.Opserver.Data.SQL
             Name = name;
             // TODO: Object Name regex for not SQLServer but InstanceName, e.g. "MSSQL$MyInstance" from "MyServer\\MyInstance"
             ObjectName = objectName.IsNullOrEmptyReturn(objectName, "SQLServer");
-            ConnectionString = connectionString.IsNullOrEmptyReturn(Current.Settings.SQL.DefaultConnectionString.Replace("$ServerName$", name));
+            if (string.IsNullOrWhiteSpace(Current.Settings.SQL.DefaultConnectionString))
+            {
+                ConnectionString = Current.Settings.SQL.Instances.FirstOrDefault().ConnectionString;
+            }
+            else
+            {
+                ConnectionString = connectionString.IsNullOrEmptyReturn(Current.Settings.SQL.DefaultConnectionString.Replace("$ServerName$", name));
+            }
         }
 
         public static SQLInstance Get(string name)

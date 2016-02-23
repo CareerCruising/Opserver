@@ -99,6 +99,6 @@ $RECYCLE.BIN/
 
 .hg
 .hgignore
-Opserver/config/*.json
-Opserver/config/*.config
+#Opserver/config/*.json
+#Opserver/config/*.config
 *.StackOverflow.*
