@@ -1,22 +1,43 @@
 ﻿{
-    "Servers": [
-      {
-        "name": "172.16.10.48",
-        "instances": [
-          {
-            "name": "Redis1",
-            "port": "6379"
-          }
-        ]
-      },
-      {
-        "name": "172.16.10.55",
-        "instances": [
-          {
-            "name": "Redis2",
-            "port": "6379"
-          }
-        ]
-      }
-    ]
+  "Servers": [
+    {
+      "name": "172.16.10.48",
+      "instances": [
+        {
+          "name": "CC1, CC2",
+          "port": "6379"
+        },
+        {
+          "name": "CC3, CAMS3, IdentityServer",
+          "port": "6380"
+        }
+      ]
+    },
+    {
+      "name": "172.16.10.55",
+      "instances": [
+        {
+          "name": "CC1, CC2",
+          "port": "6379"
+        },
+        {
+          "name": "CC3, CAMS3, IdentityServer",
+          "port": "6380"
+        }
+      ]
+    },
+    {
+      "name": "172.16.10.32",
+      "instances": [
+        {
+          "name": "CC1, CC2, CC3Dev, CAMS3Dev, IdentityServer Dev",
+          "port": "6379"
+        },
+        {
+          "name": "CC3Test, CAMS3Test, IdentityServer Test",
+          "port": "6380"
+        }
+      ]
+    }
+  ]
 }
