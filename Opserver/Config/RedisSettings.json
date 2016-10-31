@@ -36,6 +36,10 @@
         {
           "name": "CC3Test, CAMS3Test, IdentityServer Test",
           "port": "6380"
+        },
+		{
+          "name": "CC3Stage, CAMS3Stage, IdentityServer Staging",
+          "port": "6381"
         }
       ]
     }
